@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <!-- 强制UTF-8编码，彻底解决中文乱码 -->
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VM搭建Debian 12 环境并配置nginx,php服务</title>
     <style>
@@ -48,7 +46,6 @@
             margin: 10px 0;
             font-size: 15px;
         }
-        /* 图片容器样式 */
         .img-box {
             margin: 16px 0;
             padding: 12px;
@@ -69,7 +66,6 @@
             color: #666;
             margin-top: 10px;
         }
-        /* 代码块样式 */
         pre {
             background-color: #282c34;
             color: #abb2bf;
@@ -83,7 +79,6 @@
         code {
             font-family: Consolas, Monaco, monospace;
         }
-        /* 提示说明栏 */
         .note {
             background: #fff3cd;
             padding: 10px 15px;
@@ -98,26 +93,26 @@
 
     <h2>1、安装虚拟机</h2>
     <div class="img-box">
-        <img src="图片1.png" alt="VMware官方页面">
+        <img src="https://pic1.imgdb.cn/item/6a2bcdbcc3d435497c279f09.png" alt="VMware官方页面">
         <div class="img-desc">VMware 官方页面截图</div>
     </div>
 
     <h2>2、安装Debian 12 的镜像</h2>
     <div class="img-box">
-        <img src="图片2.png" alt="Debian12镜像文件选择">
+        <img src="https://pic1.imgdb.cn/item/6a2bcdbbc3d435497c279f06.png" alt="Debian12镜像文件选择">
         <div class="img-desc">镜像文件：debian-12.0.0-amd64-netinst.iso</div>
     </div>
 
     <h2>3、在VM上搭建Debian 12 虚拟机</h2>
     <p>参考哔哩哔哩相关安装教程进行操作</p>
     <div class="img-box">
-        <img src="图片3.png" alt="B站Debian安装教程页面">
+        <img src="https://pic1.imgdb.cn/item/6a2bcdbbc3d435497c279f07.png" alt="B站Debian安装教程页面">
         <div class="img-desc">B站教程：VMware虚拟机安装Debian 12系统</div>
     </div>
 
     <h2>4、安装图形化界面成功</h2>
     <div class="img-box">
-        <img src="图片4.png" alt="Debian 12 图形界面与终端">
+        <img src="https://pic1.imgdb.cn/item/6a2bcdbbc3d435497c279f08.png" alt="Debian 12 图形界面与终端">
         <div class="img-desc">Debian 12 桌面、终端命令及网卡信息</div>
     </div>
 <pre>
@@ -162,11 +157,11 @@ sudo apt install -y libxml2-dev libxslt1-dev libgd-dev libgeoip-dev libbz2-dev \
 libjpeg-dev libpng-dev libfreetype6-dev libzip-dev libonig-dev
 </pre>
     <div class="img-box">
-        <img src="图片5.png" alt="编译工具链安装过程">
+        <img src="https://pic1.imgdb.cn/item/6a2bcdbcc3d435497c279f0a.png" alt="编译工具链安装过程">
         <div class="img-desc">基础编译工具安装终端输出</div>
     </div>
     <div class="img-box">
-        <img src="图片6.png" alt="扩展依赖库安装过程">
+        <img src="https://pic1.imgdb.cn/item/6a2bcdbcc3d435497c279f0b.png" alt="扩展依赖库安装过程">
         <div class="img-desc">PHP/ Nginx 扩展依赖库安装终端输出</div>
     </div>
 
@@ -180,13 +175,13 @@ libjpeg-dev libpng-dev libfreetype6-dev libzip-dev libonig-dev
 sudo useradd -s /sbin/nologin nginx
 </pre>
     <div class="img-box">
-        <img src="图片7.png" alt="创建Nginx系统用户">
+        <img src="https://pic1.imgdb.cn/item/6a2bcdfec3d435497c279f32.png" alt="创建Nginx系统用户">
         <div class="img-desc">创建无登录权限系统用户操作截图</div>
     </div>
 
 <h4>5.2.3 配置、编译与安装</h4>
     <div class="img-box">
-        <img src="图片8.png" alt="Nginx编译配置界面">
+        <img src="https://pic1.imgdb.cn/item/6a2bcdfec3d435497c279f33.png" alt="Nginx编译配置界面">
         <div class="img-desc">Nginx ./configure 编译参数配置</div>
     </div>
 
@@ -210,7 +205,7 @@ PrivateTmp=true
 WantedBy=multi-user.target
 </pre>
     <div class="img-box">
-        <img src="图片9.png" alt="编辑nginx.service服务文件">
+        <img src="https://pic1.imgdb.cn/item/6a2bcdfec3d435497c279f30.png" alt="编辑nginx.service服务文件">
         <div class="img-desc">Nginx 系统服务配置文件编辑界面</div>
     </div>
 
@@ -221,7 +216,7 @@ sudo systemctl enable nginx
 sudo systemctl start nginx
 </pre>
     <div class="img-box">
-        <img src="图片10.png" alt="Nginx编译安装与服务启动">
+        <img src="https://pic1.imgdb.cn/item/6a2bcdffc3d435497c279f35.png" alt="Nginx编译安装与服务启动">
         <div class="img-desc">Nginx 编译收尾、服务启动命令截图</div>
     </div>
 
@@ -236,19 +231,19 @@ tar -zxvf php-8.4.9.tar.gz
 cd php-8.4.9
 </pre>
     <div class="img-box">
-        <img src="图片11.png" alt="PHP源码下载解压">
+        <img src="https://pic1.imgdb.cn/item/6a2bcdfec3d435497c279f31.png" alt="PHP源码下载解压">
         <div class="img-desc">PHP 源码包下载、解压、进入目录操作</div>
     </div>
 
 <h3>6.2 配置与编译</h3>
     <div class="img-box">
-        <img src="图片12.png" alt="PHP编译参数配置">
+        <img src="https://pic1.imgdb.cn/item/6a2bcdfec3d435497c279f34.png" alt="PHP编译参数配置">
         <div class="img-desc">PHP 编译 configure 参数配置界面</div>
     </div>
 
 <h3>6.3 配置文件设置</h3>
     <div class="img-box">
-        <img src="图片13.png" alt="PHP核心配置文件修改">
+        <img src="https://pic1.imgdb.cn/item/6a2bce23c3d435497c279f3c.png" alt="PHP核心配置文件修改">
         <div class="img-desc">PHP 运行配置文件编辑界面</div>
     </div>
 
@@ -269,7 +264,7 @@ PrivateTmp=true
 WantedBy=multi-user.target
 </pre>
     <div class="img-box">
-        <img src="图片14.png" alt="编辑php-fpm.service文件">
+        <img src="https://pic1.imgdb.cn/item/6a2bce23c3d435497c279f3f.png" alt="编辑php-fpm.service文件">
         <div class="img-desc">PHP-FPM 系统服务文件编辑界面</div>
     </div>
 
@@ -280,7 +275,7 @@ sudo systemctl start php-fpm
 sudo systemctl status php-fpm
 </pre>
     <div class="img-box">
-        <img src="图片15.png" alt="PHP-FPM服务启动与状态查看">
+        <img src="https://pic1.imgdb.cn/item/6a2bce24c3d435497c279f40.png" alt="PHP-FPM服务启动与状态查看">
         <div class="img-desc">PHP-FPM 服务启动、状态查询终端截图</div>
     </div>
 
@@ -306,7 +301,7 @@ server {
 }
 </pre>
     <div class="img-box">
-        <img src="图片16.png" alt="Nginx站点配置">
+        <img src="https://pic1.imgdb.cn/item/6a2bce23c3d435497c279f3b.png" alt="Nginx站点配置">
         <div class="img-desc">Nginx 支持PHP解析的站点配置</div>
     </div>
 
@@ -317,7 +312,7 @@ sudo systemctl restart nginx
 sudo systemctl restart php-fpm
 </pre>
     <div class="img-box">
-        <img src="图片17.png" alt="服务重启命令">
+        <img src="https://pic1.imgdb.cn/item/6a2bce23c3d435497c279f3d.png" alt="服务重启命令">
         <div class="img-desc">Nginx、PHP-FPM 服务重启操作</div>
     </div>
 
@@ -331,7 +326,7 @@ sudo nano /usr/local/nginx/html/info.php
 &lt;?php phpinfo(); ?&gt;
 </pre>
     <div class="img-box">
-        <img src="图片18.png" alt="编辑PHP测试文件">
+        <img src="https://pic1.imgdb.cn/item/6a2bce23c3d435497c279f3e.png" alt="编辑PHP测试文件">
         <div class="img-desc">info.php 探针文件编辑界面</div>
     </div>
 
@@ -347,38 +342,37 @@ Commercial support is available at nginx.com.
 Thank you for using nginx.
 </pre>
     <div class="img-box">
-        <img src="图片19.png" alt="浏览器访问Nginx首页">
+        <img src="https://pic1.imgdb.cn/item/6a2bce3bc3d435497c279f4f.png" alt="浏览器访问Nginx首页">
         <div class="img-desc">宿主机浏览器访问测试页面效果</div>
     </div>
 
-    <!-- 图片20 ~ 图片26 预留位置 -->
     <h2>补充截图区域</h2>
     <div class="img-box">
-        <img src="图片20.png" alt="补充截图20">
+        <img src="https://pic1.imgdb.cn/item/6a2bce3bc3d435497c279f55.png" alt="补充截图20">
         <div class="img-desc">补充截图 20</div>
     </div>
     <div class="img-box">
-        <img src="图片21.png" alt="补充截图21">
+        <img src="https://pic1.imgdb.cn/item/6a2bce3bc3d435497c279f50.png" alt="补充截图21">
         <div class="img-desc">补充截图 21</div>
     </div>
     <div class="img-box">
-        <img src="图片22.png" alt="补充截图22">
+        <img src="https://pic1.imgdb.cn/item/6a2bce3bc3d435497c279f53.png" alt="补充截图22">
         <div class="img-desc">补充截图 22</div>
     </div>
     <div class="img-box">
-        <img src="图片23.png" alt="补充截图23">
+        <img src="https://pic1.imgdb.cn/item/6a2bce3bc3d435497c279f54.png" alt="补充截图23">
         <div class="img-desc">补充截图 23</div>
     </div>
     <div class="img-box">
-        <img src="图片24.png" alt="补充截图24">
+        <img src="https://pic1.imgdb.cn/item/6a2bce3bc3d435497c279f52.png" alt="补充截图24">
         <div class="img-desc">补充截图 24</div>
     </div>
     <div class="img-box">
-        <img src="图片25.png" alt="补充截图25">
+        <img src="https://pic1.imgdb.cn/item/6a2bce50c3d435497c279f61.png" alt="补充截图25">
         <div class="img-desc">补充截图 25</div>
     </div>
     <div class="img-box">
-        <img src="图片26.png" alt="补充截图26">
+        <img src="https://pic1.imgdb.cn/item/6a2bce51c3d435497c279f62.png" alt="补充截图26">
         <div class="img-desc">补充截图 26</div>
     </div>
 
